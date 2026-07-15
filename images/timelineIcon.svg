@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60" role="img" aria-label="A simple line drawing of a timeline with three marked points">
+  <!-- Original hand drawn icon, one line with three circles marking points in time -->
+  <line x1="10" y1="30" x2="190" y2="30" stroke="#A8763E" stroke-width="3"/>
+  <circle cx="30" cy="30" r="8" fill="#FFFFFF" stroke="#A8763E" stroke-width="3"/>
+  <circle cx="100" cy="30" r="8" fill="#A8763E" stroke="#A8763E" stroke-width="3"/>
+  <circle cx="170" cy="30" r="8" fill="#FFFFFF" stroke="#A8763E" stroke-width="3"/>
+</svg>

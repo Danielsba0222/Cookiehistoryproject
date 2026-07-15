@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="A simple line drawing of a cookie with chocolate chips">
+  <!-- Original hand drawn icon, one circle for the cookie body and small dots for chips -->
+  <circle cx="50" cy="50" r="42" fill="#E9C48C" stroke="#A8763E" stroke-width="4"/>
+  <circle cx="35" cy="38" r="5" fill="#5C3A21"/>
+  <circle cx="60" cy="30" r="4.5" fill="#5C3A21"/>
+  <circle cx="68" cy="55" r="5" fill="#5C3A21"/>
+  <circle cx="42" cy="62" r="4" fill="#5C3A21"/>
+  <circle cx="55" cy="68" r="5" fill="#5C3A21"/>
+  <circle cx="30" cy="55" r="3.5" fill="#5C3A21"/>
+</svg>

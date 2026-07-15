@@ -1,0 +1,404 @@
+/* =========================================================
+   IT 3203 Project Milestone 1
+   Style sheet for The History and Future of the HTTP Cookie
+   Author: Brooklynn Daniels
+   This is the only CSS file used across every page on the site.
+   ========================================================= */
+
+/* ---- Color and spacing settings kept in one place so the
+   whole site is easy to update from a single spot ---- */
+:root {
+  --bgColor: #FFFFFF;
+  --pageWidth: 900px;
+  --textColor: #2B2420;
+  --mutedColor: #6B6058;
+  --accentColor: #A8763E;
+  --accentDark: #5C3A21;
+  --softBg: #FBF7F1;
+  --borderColor: #E3DCD3;
+  --headingFont: Georgia, "Times New Roman", serif;
+  --bodyFont: Arial, Verdana, sans-serif;
+}
+
+/* ---- Type selectors: these style every element of that
+   kind on the page, no class needed ---- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--bodyFont);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--textColor);
+  background-color: var(--bgColor);
+}
+
+h1, h2, h3 {
+  font-family: var(--headingFont);
+  color: var(--accentDark);
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2.1rem;
+  margin: 0 0 0.4em 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 1.4em 0 0.5em 0;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid var(--borderColor);
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 1em 0 0.4em 0;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+ul, ol {
+  margin: 0 0 1em 0;
+  padding-left: 1.4em;
+}
+
+li {
+  margin-bottom: 0.4em;
+}
+
+a {
+  color: var(--accentColor);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+/* hover effect required by the milestone guide, applies to
+   every plain text link across the whole site */
+a:hover {
+  color: var(--accentDark);
+  border-bottom: 1px solid var(--accentDark);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0 1.5em 0;
+  font-size: 0.95rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.6em 0.8em;
+  border: 1px solid var(--borderColor);
+}
+
+th {
+  background-color: var(--softBg);
+  color: var(--accentDark);
+  font-family: var(--headingFont);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================================
+   Page frame, built with CSS grid so header, nav, main
+   content, and footer always stack in the same order
+   ========================================================= */
+.pageFrame {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* ---- id selector: there is only ever one site header,
+   so it gets its own id instead of a class ---- */
+#siteHeader {
+  background-color: var(--accentDark);
+  color: #FFFFFF;
+  padding: 1.4em 1.2em;
+}
+
+#siteHeader .headerInner {
+  max-width: var(--pageWidth);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+}
+
+#siteHeader h1 {
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+#siteHeader p {
+  margin: 0.2em 0 0 0;
+  color: #EFE2CF;
+  font-size: 0.95rem;
+}
+
+#siteHeader img {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+}
+
+/* ---- class selector: the nav menu is reused on every
+   page, so it is styled by class rather than id ---- */
+.mainNav {
+  background-color: var(--softBg);
+  border-bottom: 1px solid var(--borderColor);
+}
+
+.mainNav ul {
+  max-width: var(--pageWidth);
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mainNav li {
+  margin: 0;
+}
+
+.mainNav a {
+  display: block;
+  padding: 0.85em 1em;
+  color: var(--accentDark);
+  border-bottom: 3px solid transparent;
+  font-size: 0.95rem;
+}
+
+.mainNav a:hover {
+  background-color: #FFFFFF;
+  border-bottom: 3px solid var(--accentColor);
+}
+
+.mainNav a.currentPage {
+  border-bottom: 3px solid var(--accentColor);
+  font-weight: bold;
+}
+
+main {
+  max-width: var(--pageWidth);
+  margin: 0 auto;
+  padding: 2em 1.2em 3em 1.2em;
+  width: 100%;
+}
+
+/* ---- Homepage abstract box ---- */
+.introBox {
+  background-color: var(--softBg);
+  border: 1px solid var(--borderColor);
+  border-radius: 6px;
+  padding: 1.4em 1.6em;
+  margin-bottom: 1.6em;
+}
+
+/* ---- Key terms and key concepts, laid out with flexbox
+   so the cards wrap naturally on a narrow screen ---- */
+.cardRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin: 1.2em 0 1.6em 0;
+}
+
+.card {
+  background-color: var(--softBg);
+  border: 1px solid var(--borderColor);
+  border-radius: 6px;
+  padding: 1em 1.2em;
+  flex: 1 1 250px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--accentDark);
+}
+
+/* ---- Table of contents list on the homepage ---- */
+.tocList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8em;
+  list-style: none;
+  padding: 0;
+}
+
+.tocList li {
+  margin: 0;
+}
+
+.tocList a {
+  display: block;
+  padding: 0.7em 1.1em;
+  background-color: var(--accentColor);
+  color: #FFFFFF;
+  border-radius: 5px;
+  border-bottom: none;
+}
+
+.tocList a:hover {
+  background-color: var(--accentDark);
+  border-bottom: none;
+}
+
+/* ---- Small page label shown above every h1, gives each
+   page a consistent, simple business style header ---- */
+.pageLabel {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mutedColor);
+  margin-bottom: 0.3em;
+}
+
+/* ---- About page layout ---- */
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.6em;
+  align-items: start;
+}
+
+.aboutGrid .photoBlock {
+  background-color: var(--softBg);
+  border: 1px solid var(--borderColor);
+  border-radius: 6px;
+  padding: 1.2em;
+  text-align: center;
+}
+
+@media (max-width: 620px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   Footer, same on every page, holds the required class
+   project note and the link to the class website
+   ========================================================= */
+footer {
+  background-color: var(--accentDark);
+  color: #EFE2CF;
+  padding: 1.4em 1.2em;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+footer a {
+  color: #FFFFFF;
+}
+
+footer a:hover {
+  color: var(--softBg);
+  border-bottom: 1px solid var(--softBg);
+}
+
+/* =========================================================
+   Quiz page, added for Milestone 2
+   Uses the same color variables as the rest of the site
+   ========================================================= */
+.quizQuestion {
+  background-color: var(--softBg);
+  border: 1px solid var(--borderColor);
+  border-radius: 6px;
+  padding: 1.1em 1.3em;
+  margin-bottom: 1.1em;
+}
+
+.quizQuestion label {
+  display: block;
+  margin: 0.4em 0;
+  cursor: pointer;
+}
+
+.quizQuestion input[type="text"] {
+  padding: 0.5em 0.7em;
+  width: 100%;
+  max-width: 320px;
+  border: 1px solid var(--borderColor);
+  border-radius: 4px;
+  font-family: var(--bodyFont);
+  font-size: 1rem;
+}
+
+.quizButtons {
+  margin: 1.2em 0 1.6em 0;
+}
+
+.quizButtons button {
+  font-family: var(--bodyFont);
+  font-size: 0.95rem;
+  padding: 0.7em 1.4em;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.6em;
+}
+
+#submitQuizBtn {
+  background-color: var(--accentColor);
+  color: #FFFFFF;
+}
+
+#submitQuizBtn:hover {
+  background-color: var(--accentDark);
+}
+
+#resetQuizBtn {
+  background-color: #FFFFFF;
+  color: var(--accentDark);
+  border: 1px solid var(--borderColor) !important;
+}
+
+#resetQuizBtn:hover {
+  background-color: var(--softBg);
+}
+
+.resultSummary {
+  padding: 1em 1.3em;
+  border-radius: 6px;
+  margin-bottom: 1.4em;
+  font-family: var(--headingFont);
+  font-size: 1.15rem;
+}
+
+.resultPass {
+  background-color: #E7F2E2;
+  color: #2E6B1F;
+  border: 1px solid #BFE0B2;
+}
+
+.resultFail {
+  background-color: #F7E4DE;
+  color: #96382C;
+  border: 1px solid #EABDB0;
+}
+
+.answerCorrect {
+  color: #2E6B1F;
+  font-weight: bold;
+}
+
+.answerIncorrect {
+  color: #96382C;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}

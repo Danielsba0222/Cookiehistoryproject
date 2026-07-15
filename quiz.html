@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz | The History and Future of the HTTP Cookie</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="pageFrame">
+
+  <!-- Site header, the same markup is reused at the top of every page -->
+  <header id="siteHeader">
+    <div class="headerInner">
+      <img src="images/cookieIcon.svg" alt="Cookie icon">
+      <div>
+        <h1>The History and Future of the HTTP Cookie</h1>
+        <p>An IT 3203 research site by Brooklynn Daniels</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main menu, kept identical on every page so it's consistent site wide -->
+  <nav class="mainNav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="origins.html">Origins</a></li>
+      <li><a href="privacy.html">Privacy Problem</a></li>
+      <li><a href="sandbox.html">Privacy Sandbox</a></li>
+      <li><a href="concepts.html">Key Concepts</a></li>
+      <li><a href="references.html">References</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="quiz.html" class="currentPage">Quiz</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <p class="pageLabel">Self Assessment</p>
+    <h1>Cookie Knowledge Quiz</h1>
+    <p>Answer all five questions below, then press Submit Quiz to see your score,
+      your pass or fail result, and the correct answer for each question.</p>
+
+    <form id="quizForm">
+
+      <div class="quizQuestion">
+        <p><strong>1. Fill in the blank:</strong> A cookie is created when a server
+          response includes a __________ header.</p>
+        <input type="text" id="q1" name="q1" placeholder="Type your answer here">
+      </div>
+
+      <div class="quizQuestion">
+        <p><strong>2.</strong> Who invented the HTTP cookie in 1994?</p>
+        <label><input type="radio" name="q2" value="a"> Tim Berners-Lee</label>
+        <label><input type="radio" name="q2" value="b"> Lou Montulli</label>
+        <label><input type="radio" name="q2" value="c"> Marc Andreessen</label>
+        <label><input type="radio" name="q2" value="d"> David Kristol</label>
+      </div>
+
+      <div class="quizQuestion">
+        <p><strong>3.</strong> Which type of cookie is most associated with
+          cross site ad tracking?</p>
+        <label><input type="radio" name="q3" value="a"> First party cookie</label>
+        <label><input type="radio" name="q3" value="b"> Session cookie</label>
+        <label><input type="radio" name="q3" value="c"> Third party cookie</label>
+        <label><input type="radio" name="q3" value="d"> Secure cookie</label>
+      </div>
+
+      <div class="quizQuestion">
+        <p><strong>4.</strong> Which law was the first to require websites to get
+          consent before setting non essential cookies?</p>
+        <label><input type="radio" name="q4" value="a"> CCPA</label>
+        <label><input type="radio" name="q4" value="b"> GDPR</label>
+        <label><input type="radio" name="q4" value="c"> The ePrivacy Directive</label>
+        <label><input type="radio" name="q4" value="d"> RFC 2109</label>
+      </div>
+
+      <div class="quizQuestion">
+        <p><strong>5. Select all that apply:</strong> Which of these are real
+          reasons Google's Privacy Sandbox plan kept getting delayed?</p>
+        <label><input type="checkbox" name="q5" value="a"> Antitrust regulators raised concerns</label>
+        <label><input type="checkbox" name="q5" value="b"> Advertisers reported revenue drops in early tests</label>
+        <label><input type="checkbox" name="q5" value="c"> Apple invented the technology first</label>
+        <label><input type="checkbox" name="q5" value="d"> Low industry adoption of the new APIs</label>
+      </div>
+
+      <div class="quizButtons">
+        <button type="submit" id="submitQuizBtn">Submit Quiz</button>
+        <button type="button" id="resetQuizBtn">Reset Quiz</button>
+      </div>
+    </form>
+
+    <div id="resultSummary" class="resultSummary hidden"></div>
+    <div id="resultDetails"></div>
+  </main>
+
+  <!-- Footer, same on every page, includes the required class project note -->
+  <footer>
+    <p>
+      This is a class project for IT 3203, Web Development, at Kennesaw State University.
+      Visit the class website at
+      <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">ksuweb.github.io/IT3203</a>.
+    </p>
+  </footer>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

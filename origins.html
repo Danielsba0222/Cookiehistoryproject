@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Origins | The History and Future of the HTTP Cookie</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="pageFrame">
+
+  <header id="siteHeader">
+    <div class="headerInner">
+      <img src="images/cookieIcon.svg" alt="Cookie icon">
+      <div>
+        <h1>The History and Future of the HTTP Cookie</h1>
+        <p>An IT 3203 research site by Brooklynn Daniels</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mainNav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="origins.html" class="currentPage">Origins</a></li>
+      <li><a href="privacy.html">Privacy Problem</a></li>
+      <li><a href="sandbox.html">Privacy Sandbox</a></li>
+      <li><a href="concepts.html">Key Concepts</a></li>
+      <li><a href="references.html">References</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <p class="pageLabel">Topic Page</p>
+    <img src="images/timelineIcon.svg" alt="Timeline icon" style="width:180px; margin-bottom:0.5em;">
+    <h1 style="font-size:1.9rem;">Origins: How the Cookie Was Invented</h1>
+
+    <p>
+      The cookie was invented in 1994 by Lou Montulli, who was only 23 years old at the
+      time and working as an engineer at Netscape Communications. Netscape was building an
+      early online shopping system for the company MCI, and the client needed a way to
+      remember a shopper's cart across a bunch of separate page loads.
+    </p>
+
+    <p>
+      The problem was that HTTP, the protocol the whole web runs on, does not have any
+      memory built in. Every request a browser makes gets treated like a brand new request,
+      with nothing linking it to the one before it. Without some way to bridge that gap, a
+      shopper would have had to log back in or re enter their cart on every single page.
+    </p>
+
+    <p>
+      Some engineers had floated the idea of giving every browser one permanent ID number,
+      but Montulli did not like that idea, since it would let any website track a person
+      everywhere on the web, not just the one site that handed out the ID. So instead he
+      built a system where a server could ask a browser to hold onto a small piece of data
+      and only send it back to that same server later, which kept the memory tied to one
+      site at a time.
+    </p>
+
+    <p>
+      He pulled the name from "magic cookies," an older computer science term for a token
+      passed between programs, mostly because he liked how it sounded. Netscape shipped
+      cookie support in October 1994, and within about a year Netscape was the most popular
+      browser in the world, using cookies as an everyday part of browsing. Microsoft added
+      cookie support to Internet Explorer the following year, and from there it spread to
+      basically every browser that came after.
+    </p>
+
+    <h2>A Quick Timeline</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>What Happened</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1994</td>
+          <td>Lou Montulli invents the cookie at Netscape to solve a shopping cart problem</td>
+        </tr>
+        <tr>
+          <td>1994</td>
+          <td>Netscape ships cookie support in its browser in October</td>
+        </tr>
+        <tr>
+          <td>1995</td>
+          <td>Microsoft adds cookie support to Internet Explorer</td>
+        </tr>
+        <tr>
+          <td>1996 to 1997</td>
+          <td>The IETF works on turning cookies into an open standard</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      The next page picks up right where this one leaves off, once cookies became useful,
+      an early standards group had to decide how far a cookie should be allowed to reach
+      across the web.
+    </p>
+    <p><a href="privacy.html">Continue to the Privacy Problem page &raquo;</a></p>
+  </main>
+
+  <footer>
+    <p>
+      This is a class project for IT 3203, Web Development, at Kennesaw State University.
+      Visit the class website at
+      <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">ksuweb.github.io/IT3203</a>.
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

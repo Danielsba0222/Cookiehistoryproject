@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Problem | The History and Future of the HTTP Cookie</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="pageFrame">
+
+  <header id="siteHeader">
+    <div class="headerInner">
+      <img src="images/cookieIcon.svg" alt="Cookie icon">
+      <div>
+        <h1>The History and Future of the HTTP Cookie</h1>
+        <p>An IT 3203 research site by Brooklynn Daniels</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mainNav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="origins.html">Origins</a></li>
+      <li><a href="privacy.html" class="currentPage">Privacy Problem</a></li>
+      <li><a href="sandbox.html">Privacy Sandbox</a></li>
+      <li><a href="concepts.html">Key Concepts</a></li>
+      <li><a href="references.html">References</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <p class="pageLabel">Topic Page</p>
+    <img src="images/shieldIcon.svg" alt="Shield icon" style="width:70px; margin-bottom:0.5em;">
+    <h1 style="font-size:1.9rem;">The Privacy Problem</h1>
+
+    <p>
+      Once cookies were proven useful, the Internet Engineering Task Force put together a
+      working group, led by Bell Labs researcher David Kristol and Montulli himself, to
+      turn Netscape's informal design into an actual open standard. As early as 1996, the
+      group was already worried about "third party" cookies, meaning cookies set not by
+      the site someone is actually visiting, but by an advertising script embedded inside
+      that site, which lets the ad company recognize the same browser across a bunch of
+      different, unrelated websites.
+    </p>
+
+    <p>
+      The group's first draft tried to block third party cookies by default. A Dutch
+      member of the group named Koen Holtman warned early on that ad companies could just
+      agree to share cookies across networks of sites to get around the rule anyway.
+      Advertising networks pushed back on the restriction, and by the time the standard
+      published as RFC 2109 in 1997, the rule had been watered down into more of a
+      suggestion than an actual requirement. Netscape and Internet Explorer both shipped
+      with third party cookies allowed by default, and a whole industry of cross site
+      tracking and behavioral advertising grew on top of that one decision over the next
+      twenty years.
+    </p>
+
+    <h2>First Party vs Third Party Cookies</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>First Party Cookie</th>
+          <th>Third Party Cookie</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Set by the site you are actually visiting</td>
+          <td>Set by an outside script embedded in the site, usually an ad network</td>
+        </tr>
+        <tr>
+          <td>Keeps you logged in and remembers your cart</td>
+          <td>Builds a profile of your activity across many unrelated sites</td>
+        </tr>
+        <tr>
+          <td>Generally seen as necessary for a site to work</td>
+          <td>The main target of privacy laws and browser blocking</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Where the Laws Came From</h2>
+    <p>
+      Public concern from investigative journalism and research linking cookies to
+      behavioral tracking led directly to new laws, starting with the EU's 2009 ePrivacy
+      Directive, which required sites to get consent before setting non essential cookies.
+      The EU's 2018 GDPR added strict rules on personal data in general, and California's
+      CCPA and a bunch of other United States state privacy laws followed after that. The
+      cookie consent banner that pops up on almost every website today is the direct and
+      very visible result of those laws.
+    </p>
+
+    <p><a href="sandbox.html">Continue to the Privacy Sandbox page &raquo;</a></p>
+  </main>
+
+  <footer>
+    <p>
+      This is a class project for IT 3203, Web Development, at Kennesaw State University.
+      Visit the class website at
+      <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">ksuweb.github.io/IT3203</a>.
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
