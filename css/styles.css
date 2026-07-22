@@ -402,3 +402,199 @@ footer a:hover {
 .hidden {
   display: none;
 }
+
+/* ---- Table wrapper so wide tables can scroll sideways
+   on a narrow screen instead of squishing or breaking
+   the page layout ---- */
+.tableWrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1.5em;
+}
+
+.tableWrap table {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   Milestone 3: Responsive and mobile web design
+   Two breakpoints are used below, one for tablet size
+   screens and one for phone size screens, so the layout
+   keeps adjusting as the screen gets smaller
+   ========================================================= */
+
+/* ---- Tablet size screens ---- */
+@media (max-width: 768px) {
+  #siteHeader .headerInner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #siteHeader p {
+    text-align: center;
+  }
+
+  main {
+    padding: 1.8em 1em 2.5em 1em;
+  }
+}
+
+/* ---- Phone size screens ---- */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  #siteHeader h1 {
+    font-size: 1.3rem;
+  }
+
+  /* Stack the main menu into full width, easy to tap links
+     instead of a tight row of small text links */
+  .mainNav ul {
+    flex-direction: column;
+  }
+
+  .mainNav a {
+    border-bottom: 1px solid var(--borderColor);
+  }
+
+  .mainNav a.currentPage,
+  .mainNav a:hover {
+    border-bottom: 1px solid var(--borderColor);
+    border-left: 4px solid var(--accentColor);
+  }
+
+  .cardRow {
+    flex-direction: column;
+  }
+
+  .tocList {
+    flex-direction: column;
+  }
+
+  .tocList a {
+    text-align: center;
+  }
+
+  /* Give the table a minimum width inside its scroll
+     wrapper so the columns stay readable on a phone */
+  .tableWrap table {
+    min-width: 480px;
+  }
+
+  /* Stack the quiz buttons and make them full width,
+     easier to tap accurately on a small screen */
+  .quizButtons button {
+    display: block;
+    width: 100%;
+    margin: 0 0 0.7em 0;
+  }
+
+  .quizQuestion input[type="text"] {
+    max-width: 100%;
+  }
+}
+
+/* =========================================================
+   Milestone 3: Responsive and mobile design
+   Two breakpoints below: tablet size and phone size.
+   Goal is that the layout, menu, tables, and quiz form all
+   stay easy to read and tap on a small screen.
+   ========================================================= */
+
+/* ---- Tablet size and smaller ---- */
+@media (max-width: 768px) {
+
+  main {
+    padding: 1.6em 1em 2.4em 1em;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #siteHeader {
+    padding: 1.1em 1em;
+  }
+
+  #siteHeader h1 {
+    font-size: 1.35rem;
+  }
+
+  .mainNav a {
+    padding: 0.7em 0.85em;
+    font-size: 0.9rem;
+  }
+
+  .aboutGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Phone size and smaller ---- */
+@media (max-width: 480px) {
+
+  /* Stack the header logo and title so nothing gets squeezed */
+  #siteHeader .headerInner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.4em;
+  }
+
+  /* Full width, stacked menu items are easier to tap than a
+     row of small links on a phone */
+  .mainNav ul {
+    flex-direction: column;
+  }
+
+  .mainNav li {
+    width: 100%;
+  }
+
+  .mainNav a {
+    text-align: center;
+    border-bottom: 1px solid var(--borderColor);
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  /* Key term and key concept cards go full width */
+  .card {
+    flex: 1 1 100%;
+  }
+
+  /* Tables get their own horizontal scroll instead of
+     squeezing every column onto a narrow screen */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Quiz text input and buttons go full width and stack,
+     which is easier to tap and read on a phone */
+  .quizQuestion input[type="text"] {
+    max-width: 100%;
+  }
+
+  .quizButtons button {
+    display: block;
+    width: 100%;
+    margin: 0 0 0.6em 0;
+  }
+}
